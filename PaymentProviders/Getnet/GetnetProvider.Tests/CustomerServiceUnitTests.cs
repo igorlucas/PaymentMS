@@ -25,7 +25,8 @@ namespace GetnetProvider.Tests
 
         public CustomerServiceUnitTests()
         {
-            _configuration = new ConfigurationBuilder().AddUserSecrets<CustomerServiceUnitTests>().Build();
+            //_configuration = new ConfigurationBuilder().AddUserSecrets<CustomerServiceUnitTests>().Build();
+            _configuration = new ConfigurationBuilder().AddJsonFile("appsettings.Development.json").Build();
 
             _getnetSettingsOptions = Options.Create(new GetnetSettings()
             {
