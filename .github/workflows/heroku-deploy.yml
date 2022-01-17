@@ -14,7 +14,7 @@ jobs:
       - name: Login to Heroku Container registry
         env: 
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-        run: heroku container:login
+        run: sudo apt update && sudo apt install heroku && heroku container:login
       #- name: Check out repository
       #  uses: actions/checkout@v2
       #- name: Deploy to Heroku
