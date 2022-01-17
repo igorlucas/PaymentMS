@@ -7,7 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["PaymentMS.API/PaymentMS.API.csproj", "PaymentMS.API/"]
+COPY ["*.csproj", "PaymentMS.API/"]
 RUN dotnet restore "PaymentMS.API/PaymentMS.API.csproj"
 COPY . .
 WORKDIR "/src/PaymentMS.API"
